@@ -334,7 +334,7 @@ export default class ChatItem extends PureComponent {
               {
                 isSelf && type !== 'system' &&
                 <View>
-                  {moment(message.time).format('A hh:mm')}
+                  <Text>{moment(message.time).format('A hh:mm')}</Text>
                 </View>
               }
               {
