@@ -1,4 +1,5 @@
 import moment from 'moment'
+import 'moment/locale/ko'
 import {Dimensions, Platform} from 'react-native'
 import { EMOJIS_ZH, invertKeyValues } from '../source/emojis'
 const X_WIDTH = 375
@@ -15,7 +16,7 @@ const IPADPRO129_WIDTH = 1366
 const { height: D_HEIGHT, width: D_WIDTH } = Dimensions.get('window')
 
 const getCurrentTime = (time = 0) => {
-  return moment(time).lang('ko').format('YYYY.MM.DD dddd');
+  return moment(time).format('YYYY.MM.DD dddd');
   const nowTime = new Date() // 当前日前对象
   const myyear = nowTime.getFullYear() // 当前年份
   const myday = nowTime.getDay() // 当前星期
