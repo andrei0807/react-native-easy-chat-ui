@@ -15,6 +15,7 @@ const IPADPRO129_WIDTH = 1366
 const { height: D_HEIGHT, width: D_WIDTH } = Dimensions.get('window')
 
 const getCurrentTime = (time = 0) => {
+  return moment(time).format('YYYY.MM.DD');
   const nowTime = new Date() // 当前日前对象
   const myyear = nowTime.getFullYear() // 当前年份
   const myday = nowTime.getDay() // 当前星期
