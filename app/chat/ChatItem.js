@@ -6,6 +6,8 @@ import {
   Text,
   StyleSheet, Dimensions
 } from 'react-native'
+import moment from 'moment'
+import 'moment/locale/ko'
 import TextMessage from './TextMessage'
 import ImageMessage from './ImageMessage'
 import VideoMessage from './VideoMessage'
@@ -327,6 +329,12 @@ export default class ChatItem extends PureComponent {
                 !isSelf && isOpen &&  type !== 'system' &&
                 <View>
                   {this.renderCheck()}
+                </View>
+              }
+              {
+                isSelf && type !== 'system' &&
+                <View>
+                  {moment(message.time).format('A hh:mm')}
                 </View>
               }
               {
