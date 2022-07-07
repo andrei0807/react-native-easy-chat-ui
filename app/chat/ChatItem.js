@@ -332,12 +332,6 @@ export default class ChatItem extends PureComponent {
                 </View>
               }
               {
-                isSelf && type !== 'system' &&
-                <View>
-                  <Text>{moment(message.time).format('A hh:mm')}</Text>
-                </View>
-              }
-              {
                 type === 'system'
                   ? null
                   :  <TouchableOpacity
@@ -368,6 +362,12 @@ export default class ChatItem extends PureComponent {
                   style={{ flex: 1 }}
                 >
                   {this.renderCheck()}
+                </View>
+              }
+              {
+                type !== 'system' &&
+                <View style={styles.timeContainer}>
+                  <Text style={styles.timeText}>{moment(message.time).format('A hh:mm')}</Text>
                 </View>
               }
             </TouchableOpacity>
@@ -472,5 +472,12 @@ const styles = StyleSheet.create({
     color: '#aaa',
     marginBottom: 2,
     marginLeft: 14
+  },
+  timeContainer: {
+    marginBottom: 5,
+    justifyContent: 'flex-end',
+  },
+  timeText: {
+    fontSize: 11,
   }
 })
