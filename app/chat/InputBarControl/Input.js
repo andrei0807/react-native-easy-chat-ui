@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     width: '100%',
     padding: 0,
     paddingHorizontal: 16,
-    paddingTop: Platform.OS === 'ios' ? 8 : 0
+    paddingTop: Platform.OS === 'ios' ? 8 : 0,
+    color: 'black'
   }
 })
