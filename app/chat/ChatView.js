@@ -33,7 +33,7 @@ class ChatWindow extends PureComponent {
     this.time = null
     ImageComponent = CustomImageComponent || Image
     this._userHasBeenInputed = false
-    this.iosHeaderHeight = 73
+    this.iosHeaderHeight = 90
     this.isIphoneX = isIPhoneX
     this.visibleHeight = new Animated.Value(0)
     this.panelHeight = new Animated.Value(0)
