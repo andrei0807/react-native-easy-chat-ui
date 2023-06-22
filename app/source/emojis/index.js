@@ -318,6 +318,7 @@ export const EMOJIS_ZH = {
   '/{hongbao}': '[홍바오]',
   '/{fa}': '[머리카락]',
   '/{ji}': '[치킨]'
+}
 
 export const invertKeyValues = obj =>
   Object.keys(obj).reduce((acc, key) => {
